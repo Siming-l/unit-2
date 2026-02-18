@@ -1,0 +1,362 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "London",
+        "Country": "UK",
+        "1990": 0,
+        "1995": 408,
+        "2000": 415,
+        "2005": 420,
+        "2010": 430,
+        "2015": 436,
+        "2020": 440
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1276,
+          51.5072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Paris",
+        "Country": "France",
+        "1990": 0,
+        "1995": 214,
+        "2000": 219,
+        "2005": 220,
+        "2010": 226,
+        "2015": 226,
+        "2020": 226
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3522,
+          48.8566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "New York",
+        "Country": "USA",
+        "1990": 368,
+        "1995": 370,
+        "2000": 371,
+        "2005": 373,
+        "2010": 374,
+        "2015": 394,
+        "2020": 399
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006,
+          40.7128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Washington DC",
+        "Country": "USA",
+        "1990": 103,
+        "1995": 165,
+        "2000": 171,
+        "2005": 171,
+        "2010": 188,
+        "2015": 188,
+        "2020": 188
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0369,
+          38.9072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Tokyo",
+        "Country": "Japan",
+        "1990": 195,
+        "1995": 270,
+        "2000": 292,
+        "2005": 304,
+        "2010": 308,
+        "2015": 308,
+        "2020": 308
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.6917,
+          35.6895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Moscow",
+        "Country": "Russia",
+        "1990": 0,
+        "1995": 200,
+        "2000": 261,
+        "2005": 292,
+        "2010": 333,
+        "2015": 397,
+        "2020": 408
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.6173,
+          55.7558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Beijing",
+        "Country": "China",
+        "1990": 0,
+        "1995": 54,
+        "2000": 200,
+        "2005": 465,
+        "2010": 554,
+        "2015": 699,
+        "2020": 783
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.4074,
+          39.9042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Delhi",
+        "Country": "India",
+        "1990": 0,
+        "1995": 0,
+        "2000": 190,
+        "2005": 213,
+        "2010": 327,
+        "2015": 348,
+        "2020": 390
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.1025,
+          28.7041
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Seoul",
+        "Country": "South Korea",
+        "1990": 250,
+        "1995": 287,
+        "2000": 312,
+        "2005": 331,
+        "2010": 331,
+        "2015": 340,
+        "2020": 340
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.978,
+          37.5665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Mexico City",
+        "Country": "Mexico",
+        "1990": 201,
+        "1995": 201,
+        "2000": 201,
+        "2005": 226,
+        "2010": 226,
+        "2015": 226,
+        "2020": 226
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.1332,
+          19.4326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "1990": 61,
+        "1995": 61,
+        "2000": 74,
+        "2005": 89,
+        "2010": 101,
+        "2015": 104,
+        "2020": 104
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6333,
+          -23.5505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Cairo",
+        "Country": "Egypt",
+        "1990": 0,
+        "1995": 65,
+        "2000": 65,
+        "2005": 78,
+        "2010": 78,
+        "2015": 78,
+        "2020": 89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.2357,
+          30.0444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Bangkok",
+        "Country": "Thailand",
+        "1990": 0,
+        "1995": 23,
+        "2000": 23,
+        "2005": 48,
+        "2010": 70,
+        "2015": 135,
+        "2020": 209
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.5018,
+          13.7563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Singapore",
+        "Country": "Singapore",
+        "1990": 67,
+        "1995": 109,
+        "2000": 138,
+        "2005": 178,
+        "2010": 199,
+        "2015": 228,
+        "2020": 230
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8198,
+          1.3521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Madrid",
+        "Country": "Spain",
+        "1990": 114,
+        "1995": 226,
+        "2000": 281,
+        "2005": 293,
+        "2010": 294,
+        "2015": 294,
+        "2020": 294
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7038,
+          40.4168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Berlin",
+        "Country": "Germany",
+        "1990": 144,
+        "1995": 146,
+        "2000": 146,
+        "2005": 146,
+        "2010": 147,
+        "2015": 147,
+        "2020": 147
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.405,
+          52.52
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "City": "Istanbul",
+        "Country": "Turkey",
+        "1990": 0,
+        "1995": 8,
+        "2000": 44,
+        "2005": 64,
+        "2010": 76,
+        "2015": 103,
+        "2020": 154
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9784,
+          41.0082
+        ]
+      }
+    }
+  ]
+}

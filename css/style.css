@@ -1,0 +1,4 @@
+/* Stylesheet by Siming, 2026 */
+#map{
+  height: 600px; /* required: without height, map will not show */
+}
