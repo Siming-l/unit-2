@@ -1,58 +1,50 @@
 /* Adapted Tutorial - Map of GeoJSON data from MegaCities.geojson */
-
-
-// global variable so map can be accessed in other functions
+/* Map of GeoJSON data from MegaCities.geojson */
+//declare map var in global scope
 var map;
-
-
-// function to create the Leaflet map
+//function to instantiate the Leaflet map
 function createMap(){
-
-    // L.map() creates the map inside the div with id="map"
-    // center sets the starting location
-    // zoom sets the starting zoom level
+    //create the map
     map = L.map('map', {
         center: [20, 0],
         zoom: 2
     });
 
-
-    // L.tileLayer() adds the OpenStreetMap basemap
-    // attribution shows credit to the map data source
-    // .addTo(map) displays the basemap
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
+    //add OSM base tilelayer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
     }).addTo(map);
 
+    //call getData function
+    getData(map);
+};
 
-    // call function to load GeoJSON data
-    getData();
-}
+//added function to attach popups to each mapped feature
+function onEachFeature(feature, layer) {
+    //no property named popupContent; instead, create html string with all properties
+    var popupContent = "";
+    if (feature.properties) {
+        //loop to add feature property names and values to html string
+        for (var property in feature.properties){
+            popupContent += "<p>" + property + ": " + feature.properties[property] + "</p>";
+        }
+        layer.bindPopup(popupContent);
+    };
+};
 
-
-// function to load GeoJSON file and add it to the map
-function getData(){
-
-    // fetch() loads external file asynchronously
+//function to retrieve the data and place it on the map
+function getData(map){
+    //load the data
     fetch("data/MegaCities.geojson")
-
         .then(function(response){
-
-            // convert response to JSON format
             return response.json();
-
         })
-
         .then(function(json){
+            //create a Leaflet GeoJSON layer and add it to the map
+            L.geoJson(json, {
+                onEachFeature: onEachFeature
+            }).addTo(map);
+        })  
+};
 
-            // L.geoJson() creates a Leaflet layer from GeoJSON data
-            // .addTo(map) adds the features to the map
-            L.geoJson(json).addTo(map);
-
-        });
-
-}
-
-
-// run createMap function after the page loads
 document.addEventListener('DOMContentLoaded', createMap);
