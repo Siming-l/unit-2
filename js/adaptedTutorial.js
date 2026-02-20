@@ -1,5 +1,4 @@
 /* Adapted Tutorial - Map of GeoJSON data from MegaCities.geojson */
-/* Map of GeoJSON data from MegaCities.geojson */
 //declare map var in global scope
 var map;
 //function to instantiate the Leaflet map
