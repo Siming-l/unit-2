@@ -25,27 +25,6 @@
     {
       "type": "Feature",
       "properties": {
-        "City": "Paris",
-        "Country": "France",
-        "1990": 0,
-        "1995": 214,
-        "2000": 219,
-        "2005": 220,
-        "2010": 226,
-        "2015": 226,
-        "2020": 226
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.3522,
-          48.8566
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "City": "New York",
         "Country": "USA",
         "1990": 368,
@@ -67,21 +46,21 @@
     {
       "type": "Feature",
       "properties": {
-        "City": "Washington DC",
+        "City": "Chicago",
         "Country": "USA",
-        "1990": 103,
-        "1995": 165,
-        "2000": 171,
+        "1990": 170,
+        "1995": 170,
+        "2000": 170,
         "2005": 171,
-        "2010": 188,
-        "2015": 188,
-        "2020": 188
+        "2010": 171,
+        "2015": 171,
+        "2020": 171
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -77.0369,
-          38.9072
+          -87.6298,
+          41.8781
         ]
       }
     },
@@ -166,27 +145,6 @@
         "coordinates": [
           77.1025,
           28.7041
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "City": "Seoul",
-        "Country": "South Korea",
-        "1990": 250,
-        "1995": 287,
-        "2000": 312,
-        "2005": 331,
-        "2010": 331,
-        "2015": 340,
-        "2020": 340
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          126.978,
-          37.5665
         ]
       }
     },

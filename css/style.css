@@ -1,4 +1,62 @@
 /* Stylesheet by Siming, 2026 */
-#map{
-  height: 600px; /* required: without height, map will not show */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flex layout container */
+#container {
+  height: 100vh;
+  display: flex;
+}
+
+/* Map fills remaining space */
+#map {
+  flex: 1;
+  height: 100vh;
+}
+
+/* Right control panel */
+#panel {
+  width: 320px;
+  padding: 16px;
+  background: #ffffff;
+  border-left: 1px solid #ddd;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Panel title */
+#panel h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+/* Temporal legend */
+#temporal-legend {
+  font-size: 16px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+/* Slider */
+.range-slider {
+  width: 100%;
+  margin: 8px 0 14px 0;
+}
+
+/* Buttons */
+.step {
+  width: 48%;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+#reverse { float: left; }
+#forward { float: right; }
+
+/* Popup spacing */
+.leaflet-popup-content p {
+  margin: 0.2em 0;
 }
