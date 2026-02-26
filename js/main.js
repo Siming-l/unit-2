@@ -63,25 +63,24 @@ function getData() {
 // Step 3. Build attribute array (years)
 function processData(data) {
 
-  var yearSet = new Set();
+  // empty array to hold year attributes
+  var attributes = [];
 
-  data.features.forEach(function (feature) {
+  // properties of the first feature in the dataset (same as tutorial)
+  var properties = data.features[0].properties;
 
-    var props = feature.properties;
+  // loop through each property name
+  for (var key in properties) {
 
-    for (var key in props) {
-
-      if (/^\d{4}$/.test(key)) {
-        yearSet.add(key);
-      }
-
+    // keep only keys that look like years (e.g., "1990")
+    // (1) length is 4
+    // (2) key can be converted to a number
+    if (key.length === 4 && !isNaN(Number(key))) {
+      attributes.push(key);
     }
+  }
 
-  });
-
-  var attributes = Array.from(yearSet);
-
-  // sort numerically
+  // sort years in correct order
   attributes.sort(function (a, b) {
     return Number(a) - Number(b);
   });
@@ -146,22 +145,18 @@ function pointToLayer(feature, latlng, attribute) {
   var attValue = Number(feature.properties[attribute]);
 
   var options = {
-
     fillColor: "#d94801",
     color: "#7f2704",
     weight: 2,
     opacity: 0.9,
     fillOpacity: 0.30,
     radius: calcPropRadius(attValue)
-
   };
 
   var layer = L.circleMarker(latlng, options);
 
-
   // Improved popup content (handles 0 clearly)
   var valueNum = Number(feature.properties[attribute]);
-
   var valueText;
 
   if (!isNaN(valueNum) && valueNum === 0) {
@@ -175,12 +170,9 @@ function pointToLayer(feature, latlng, attribute) {
     "<p>Metro length in " + attribute +
     ": <b>" + valueText + "</b></p>";
 
-
   layer.bindPopup(popupContent, {
-
     offset: new L.Point(0, -options.radius),
     className: "metro-popup"
-
   });
 
   return layer;
@@ -193,13 +185,9 @@ function createPropSymbols(data, attributes) {
   var attribute = attributes[0];
 
   L.geoJson(data, {
-
     pointToLayer: function (feature, latlng) {
-
       return pointToLayer(feature, latlng, attribute);
-
     }
-
   }).addTo(map);
 }
 
@@ -228,7 +216,6 @@ function createSequenceControls(attributes) {
   rangeSlider.value = 0;
   rangeSlider.step = 1;
 
-
   // buttons
   document.querySelector("#panel").insertAdjacentHTML(
     "beforeend",
@@ -240,43 +227,39 @@ function createSequenceControls(attributes) {
     "<button class='step' id='forward'>Forward</button>"
   );
 
-
-  // button click events
+  // click listener for buttons
   document.querySelectorAll(".step").forEach(function (button) {
 
     button.addEventListener("click", function () {
 
-      var index =
-        Number(document.querySelector(".range-slider").value);
+      var index = Number(document.querySelector(".range-slider").value);
 
+      // increment/decrement and wrap around
       if (button.id === "forward") {
 
         index++;
 
-        if (index > attributes.length - 1)
-          index = 0;
+        if (index > attributes.length - 1) index = 0;
 
-      }
-
-      else if (button.id === "reverse") {
+      } else if (button.id === "reverse") {
 
         index--;
 
-        if (index < 0)
-          index = attributes.length - 1;
+        if (index < 0) index = attributes.length - 1;
 
       }
 
+      // update slider position
       document.querySelector(".range-slider").value = index;
 
+      // update symbols
       updatePropSymbols(attributes[index]);
 
     });
 
   });
 
-
-  // slider input event
+  // input listener for slider
   rangeSlider.addEventListener("input", function () {
 
     var index = Number(this.value);
@@ -300,15 +283,12 @@ function updatePropSymbols(attribute) {
 
       var props = layer.feature.properties;
 
-      var radius =
-        calcPropRadius(Number(props[attribute]));
-
+      // update radius
+      var radius = calcPropRadius(Number(props[attribute]));
       layer.setRadius(radius);
 
-
-      // improved popup
+      // update popup text
       var valueNum = Number(props[attribute]);
-
       var valueText;
 
       if (!isNaN(valueNum) && valueNum === 0) {
@@ -322,18 +302,14 @@ function updatePropSymbols(attribute) {
         "<p>Metro length in " + attribute +
         ": <b>" + valueText + "</b></p>";
 
-
       layer.bindPopup(popupContent, {
-
         offset: new L.Point(0, -radius),
         className: "metro-popup"
-
       });
 
     }
 
   });
-
 
   // update temporal legend
   document.querySelector("#temporal-legend").innerHTML =
@@ -343,7 +319,4 @@ function updatePropSymbols(attribute) {
 
 
 // Run after page loads
-document.addEventListener(
-  "DOMContentLoaded",
-  createMap
-);
+document.addEventListener("DOMContentLoaded", createMap);
