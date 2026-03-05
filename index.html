@@ -1,28 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="utf-8" />
   <title>Global Metro Expansion (1990–2020)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="lib/leaflet/leaflet.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <header id="page-header">
+    <h1 id="page-title">Global Metro Expansion (1990–2020)</h1>
+    <p id="page-description">
+      This map shows metro system length growth in major global cities (1990–2020).
+      Circle size represents metro length (km). A small dot shows each city center point.
+      Use the slider and step buttons on the map to explore change over time.
+      Click a city to retrieve details (city + country + current-year value).
+    </p>
+  </header>
 
-  <div id="container">
-    <div id="map"></div>
-    <div id="panel">
-      <h2>Global Metro Expansion</h2>
-      <p>
-        This map shows metro system length growth in major global cities from 1990 to 2020.
-        Circle size represents metro length (km).
-      </p>
-    </div>
+  <main id="content">
+    <section id="map-panel">
+      <div id="map"></div>
+    </section>
 
-  </div>
+    <aside id="sidebar">
+      <!-- Description of Map -->
+       <div class="sidebar-card discussion-card">
+        <h2>Discussion Prompt</h2>
+        <p>
+         The map highlights uneven metro expansion across world regions.
+        </p>
+        <p>
+         Why did some megacities accelerate rapidly after 2000 while others expanded gradually?
+        </p>
+        <p>
+         Consider governance models, population growth, economic investment, and environmental policy.
+        </p>
+      </div>
+      <!-- Year summary (replaces Important Info) -->
+      <div class="sidebar-card">
+        <h2>Year Summary</h2>
+        <div id="year-summary">
+          <p class="muted">Move the slider to see the longest and shortest systems in that year.</p>
+        </div>
+      </div>
+      <!-- Real official sources -->
+      <div class="sidebar-card">
+        <h2>Data Sources (Official)</h2>
+        <p class="muted">
+          Official operator / authority websites used to verify system information for each city.
+        </p>
+        <ul id="data-sources">
+          <li><a href="https://tfl.gov.uk/" target="_blank" rel="noopener">London — Transport for London (TfL)</a></li>
+          <li><a href="https://new.mta.info/" target="_blank" rel="noopener">New York — Metropolitan Transportation Authority (MTA)</a></li>
+          <li><a href="https://www.transitchicago.com/" target="_blank" rel="noopener">Chicago — Chicago Transit Authority (CTA)</a></li>
+          <li><a href="https://www.tokyometro.jp/en/" target="_blank" rel="noopener">Tokyo — Tokyo Metro</a></li>
+          <li><a href="https://mosmetro.ru/" target="_blank" rel="noopener">Moscow — Moscow Metro</a></li>
+          <li><a href="https://www.bjsubway.com/en/" target="_blank" rel="noopener">Beijing — Beijing Subway</a></li>
+          <li><a href="https://delhimetrorail.com/" target="_blank" rel="noopener">Delhi — Delhi Metro Rail Corporation (DMRC)</a></li>
+          <li><a href="https://www.metro.cdmx.gob.mx/" target="_blank" rel="noopener">Mexico City — Metro CDMX (STC)</a></li>
+          <li><a href="https://www.metro.sp.gov.br/" target="_blank" rel="noopener">São Paulo — Metrô São Paulo</a></li>
+          <li><a href="https://cairometro.gov.eg/en" target="_blank" rel="noopener">Cairo — Cairo Metro</a></li>
+          <li><a href="https://www.mrta.co.th/" target="_blank" rel="noopener">Bangkok — MRTA (Mass Rapid Transit Authority of Thailand)</a></li>
+          <li><a href="https://www.lta.gov.sg/" target="_blank" rel="noopener">Singapore — Land Transport Authority (LTA)</a></li>
+          <li><a href="https://www.metromadrid.es/en" target="_blank" rel="noopener">Madrid — Metro de Madrid</a></li>
+          <li><a href="https://www.bvg.de/en" target="_blank" rel="noopener">Berlin — BVG (Berliner Verkehrsbetriebe)</a></li>
+          <li><a href="https://www.metro.istanbul/en/" target="_blank" rel="noopener">Istanbul — Metro İstanbul</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
 
   <script src="lib/leaflet/leaflet-src.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 </html>
