@@ -26,10 +26,14 @@ var dataStats = {};         // {min} across all years (for scaling baseline)
 function createMap() {
 
   map = L.map("map", {
-    center: [20, 0],
-    zoom: 2,
-    worldCopyJump: true
-  });
+  center: [20, 0],
+  zoom: 2,
+  minZoom: 2,
+  maxZoom: 5,
+  maxBounds: [[-60, -180], [85, 180]],
+  maxBoundsViscosity: 1.0,
+  worldCopyJump: false
+});
 
   // Basemap layers
   var light = L.tileLayer(
@@ -154,7 +158,7 @@ function calcPropRadius(attValue) {
 function createPopupContent(properties, attribute) {
 
   var valueNum = Number(properties[attribute]);
-  var valueText = (valueNum === 0) ? "0 km (no metro yet)" : (valueNum + " km");
+  var valueText = (valueNum === 0) ? "0 km" : (valueNum + " km");
 
   var popupContent =
     "<p><b>🚇 " + properties.City + "</b></p>" +

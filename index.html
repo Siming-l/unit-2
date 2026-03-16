@@ -30,13 +30,16 @@
        <div class="sidebar-card discussion-card">
         <h2>Discussion Prompt</h2>
         <p>
-         The map highlights uneven metro expansion across world regions.
+         This map visualizes the expansion of metro systems in major global cities between 1990 and 2020.
         </p>
         <p>
-         Why did some megacities accelerate rapidly after 2000 while others expanded gradually?
+        While some cities have long-established networks that expanded gradually, others experienced rapid metro development during recent decades.
         </p>
         <p>
-         Consider governance models, population growth, economic investment, and environmental policy.
+         What factors might explain these different trajectories of urban transit development?
+        </p>
+        <p>
+         Consider historical infrastructure, population growth, government investment strategies, and environmental or mobility policies.
         </p>
       </div>
       <!-- Year summary (replaces Important Info) -->
@@ -44,30 +47,76 @@
         <h2>Year Summary</h2>
         <div id="year-summary">
           <p class="muted">Move the slider to see the longest and shortest systems in that year.</p>
+          <p class="muted">Values represent mapped metro system length (km) for each selected year, based on source notes included with the project.</p>
         </div>
       </div>
       <!-- Real official sources -->
       <div class="sidebar-card">
         <h2>Data Sources (Official)</h2>
-        <p class="muted">
-          Official operator / authority websites used to verify system information for each city.
-        </p>
-        <ul id="data-sources">
-          <li><a href="https://tfl.gov.uk/" target="_blank" rel="noopener">London — Transport for London (TfL)</a></li>
-          <li><a href="https://new.mta.info/" target="_blank" rel="noopener">New York — Metropolitan Transportation Authority (MTA)</a></li>
-          <li><a href="https://www.transitchicago.com/" target="_blank" rel="noopener">Chicago — Chicago Transit Authority (CTA)</a></li>
-          <li><a href="https://www.tokyometro.jp/en/" target="_blank" rel="noopener">Tokyo — Tokyo Metro</a></li>
-          <li><a href="https://mosmetro.ru/" target="_blank" rel="noopener">Moscow — Moscow Metro</a></li>
-          <li><a href="https://www.bjsubway.com/en/" target="_blank" rel="noopener">Beijing — Beijing Subway</a></li>
-          <li><a href="https://delhimetrorail.com/" target="_blank" rel="noopener">Delhi — Delhi Metro Rail Corporation (DMRC)</a></li>
-          <li><a href="https://www.metro.cdmx.gob.mx/" target="_blank" rel="noopener">Mexico City — Metro CDMX (STC)</a></li>
-          <li><a href="https://www.metro.sp.gov.br/" target="_blank" rel="noopener">São Paulo — Metrô São Paulo</a></li>
-          <li><a href="https://cairometro.gov.eg/en" target="_blank" rel="noopener">Cairo — Cairo Metro</a></li>
-          <li><a href="https://www.mrta.co.th/" target="_blank" rel="noopener">Bangkok — MRTA (Mass Rapid Transit Authority of Thailand)</a></li>
-          <li><a href="https://www.lta.gov.sg/" target="_blank" rel="noopener">Singapore — Land Transport Authority (LTA)</a></li>
-          <li><a href="https://www.metromadrid.es/en" target="_blank" rel="noopener">Madrid — Metro de Madrid</a></li>
-          <li><a href="https://www.bvg.de/en" target="_blank" rel="noopener">Berlin — BVG (Berliner Verkehrsbetriebe)</a></li>
-          <li><a href="https://www.metro.istanbul/en/" target="_blank" rel="noopener">Istanbul — Metro İstanbul</a></li>
+          <p class="muted">
+           Metro system length values were verified using official transit authority websites and historical system summaries. Detailed source notes are included in the project files (readme.md).
+          </p>
+          <ul id="data-sources">
+          <li>
+          London — <a href="https://tfl.gov.uk/" target="_blank">Transport for London (TfL)</a> |
+          <a href="https://en.wikipedia.org/wiki/London_Underground" target="_blank">System history</a>
+          </li>
+          <li>
+          New York — <a href="https://new.mta.info/" target="_blank">Metropolitan Transportation Authority (MTA)</a> |
+          <a href="https://en.wikipedia.org/wiki/New_York_City_Subway" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Chicago — <a href="https://www.transitchicago.com/" target="_blank">Chicago Transit Authority (CTA)</a> |
+          <a href="https://en.wikipedia.org/wiki/Chicago_%22L%22" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Tokyo — <a href="https://www.tokyometro.jp/en/" target="_blank">Tokyo Metro</a> |
+          <a href="https://en.wikipedia.org/wiki/Tokyo_subway" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Moscow — <a href="https://mosmetro.ru/" target="_blank">Moscow Metro</a> |
+          <a href="https://en.wikipedia.org/wiki/Moscow_Metro" target="_blank">System history</a>
+          </li>
+          <li>
+          Beijing — <a href="https://www.bjsubway.com/en/" target="_blank">Beijing Subway</a> |
+          <a href="https://en.wikipedia.org/wiki/Beijing_Subway" target="_blank">System overview</a>
+          </li>
+          <li>
+          Delhi — <a href="https://delhimetrorail.com/" target="_blank">Delhi Metro Rail Corporation (DMRC)</a> |
+          <a href="https://en.wikipedia.org/wiki/Delhi_Metro" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Mexico City — <a href="https://www.metro.cdmx.gob.mx/" target="_blank">Metro CDMX (STC)</a> |
+          <a href="https://en.wikipedia.org/wiki/Mexico_City_Metro" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          São Paulo — <a href="https://www.metro.sp.gov.br/" target="_blank">Metrô São Paulo</a> |
+          <a href="https://en.wikipedia.org/wiki/S%C3%A3o_Paulo_Metro" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Cairo — <a href="https://cairometro.gov.eg/en" target="_blank">Cairo Metro</a> |
+          <a href="https://en.wikipedia.org/wiki/Cairo_Metro" target="_blank">System history</a>
+          </li>
+          <li>
+          Bangkok — <a href="https://www.mrta.co.th/" target="_blank">Mass Rapid Transit Authority of Thailand (MRTA)</a> |
+          <a href="https://en.wikipedia.org/wiki/Mass_Rapid_Transit_Master_Plan_in_Bangkok_Metropolitan_Region" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Singapore — <a href="https://www.lta.gov.sg/" target="_blank">Land Transport Authority (LTA)</a> |
+          <a href="https://en.wikipedia.org/wiki/Mass_Rapid_Transit_(Singapore)" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Madrid — <a href="https://www.metromadrid.es/en" target="_blank">Metro de Madrid</a> |
+          <a href="https://en.wikipedia.org/wiki/Madrid_Metro" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Berlin — <a href="https://www.bvg.de/en" target="_blank">BVG (Berliner Verkehrsbetriebe)</a> |
+          <a href="https://en.wikipedia.org/wiki/Berlin_U-Bahn" target="_blank" rel="noopener">System overview</a>
+          </li>
+          <li>
+          Istanbul — <a href="https://www.metro.istanbul/en/" target="_blank">Metro Istanbul</a> |
+          <a href="https://en.wikipedia.org/wiki/Istanbul_Metro" target="_blank">System overview</a>
+          </li>
         </ul>
       </div>
     </aside>
